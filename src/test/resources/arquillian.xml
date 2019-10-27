@@ -1,0 +1,13 @@
+<arquillian xmlns="http://jboss.org/schema/arquillian"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://jboss.org/schema/arquillian http://jboss.org/schema/arquillian/arquillian_1_0.xsd">
+    <container qualifier="chameleon" default="true">
+        <configuration>
+            <property name="chameleonTarget">jboss eap:7.1.0:remote</property>
+            <property name="managementAddress">localhost</property>
+            <!-- property name="managementPort">THE_PORT_IF_NOT_9990</property>
+            <property name="username">THE_USER</property>
+            <property name="password">THE_PASSWORD</property -->
+        </configuration>
+    </container>
+</arquillian>

@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import javax.inject.Inject;
 
 import org.jboss.arquillian.container.test.api.Deployment;
+import org.jboss.arquillian.container.test.api.OverProtocol;
 import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.asset.EmptyAsset;
@@ -25,7 +26,7 @@ public class GreeterTest {
             .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
     }
     */
-    @Deployment
+    @Deployment @OverProtocol("Servlet 3.0")  
     public static JavaArchive createDeployment() {
         JavaArchive jar = ShrinkWrap.create(JavaArchive.class)
             //.addClass(Greeter.class)
